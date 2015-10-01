@@ -65,7 +65,7 @@
    <extension
          point="org.eclipse.ui.bindings">
       <key
-            commandId="com.software.gag.eclipse.extensions.command.openinos"
+            commandId="giusa.software.tools.eclipse.openosfolder.command"
             contextId="org.eclipse.ui.contexts.window"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="CTRL+Alt+O">
