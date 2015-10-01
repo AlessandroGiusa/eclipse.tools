@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <command
+               commandId="com.software.gag.eclipse.extensions.command.openinos"
+               icon="icon/open2.gif"
+               label="Open folder in OS"
+               mnemonic="Ctrl+Alt+O"
+               style="push"
+               tooltip="open the folder in operating system where this resource lies">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.views.ResourceNavigator">
+         <command
+               commandId="com.software.gag.eclipse.extensions.command.openinos"
+               icon="icon/open2.gif"
+               label="Open folder in OS"
+               mnemonic="Ctrl+Alt+O"
+               style="push"
+               tooltip="open the folder in operating system where this resource lies">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.cdt.ui.CView">
+         <command
+               commandId="com.software.gag.eclipse.extensions.command.openinos"
+               icon="icon/open2.gif"
+               label="Open folder in OS"
+               mnemonic="Ctrl+Alt+O"
+               style="push"
+               tooltip="open the folder in operating system where this resource lies">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer">
+         <command
+               commandId="com.software.gag.eclipse.extensions.command.openinos"
+               icon="icon/open2.gif"
+               label="Open folder in OS"
+               mnemonic="Ctrl+Alt+O"
+               style="push"
+               tooltip="open the folder in operating system where this resource lies">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.ui.category.file"
+            defaultHandler="giusa.software.tools.eclipse.openosfolder.packageexplorer.HandlerOpenFolderInOS"
+            description="open the folder of the selected resource in the package explorer"
+            id="giusa.software.tools.eclipse.openosfolder.command"
+            name="HandlerOpenFolderInOS">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.software.gag.eclipse.extensions.command.openinos"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+Alt+O">
+      </key>
+   </extension>
+
+</plugin>
